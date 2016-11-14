@@ -3,7 +3,7 @@
 // This program displays a face on
 // the console window.
 
-public class u1a1
+public class U1A1
 {
 	public static void main(String[] args)
 	{
