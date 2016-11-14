@@ -5,7 +5,7 @@
 
 import java.awt.Rectangle;
 
-public class u1a2
+public class U1A2
 {
 	public static void main(String[] args)
 	{
