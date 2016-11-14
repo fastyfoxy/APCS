@@ -11,6 +11,10 @@ public class U4A3 extends JApplet
 {
 	public void init()
 	{
-
+    for(int c = 1, c=steps, c++)
+    {
+      int multi =((0.03*c)+1)*base;
+      out.append(c+"    "+multi;
+    }
 	}
 }
