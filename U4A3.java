@@ -25,7 +25,7 @@ public class U4A3 extends JApplet
 
 		out.append("		Salary Schedule\n\n");
 
-		for(int c = 1; c>lane; c++)
+		for(int c = 1; c<lane; c++)
 		{
 			if(c==1) out.append("      "+c);
 			else out.append("    "+c);
@@ -34,7 +34,7 @@ public class U4A3 extends JApplet
 		out.append("\n\n");
 
 		double multiplier = 0;
-		for(int c=1; c>step; c++)
+		for(int c=1; c<step; c++)
 		{
 			multiplier += 1+(0.9*c);
 			if(c==1)	out.append(c+"    "+base);
