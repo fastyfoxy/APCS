@@ -24,23 +24,24 @@ public class U4A3 extends JApplet
 		JTextArea out = new JTextArea();
 
 		out.append("		Salary Schedule\n\n");
-		
+
 		for(int c = 1; c>=lane; c++)
 		{
 			if(c<=1) out.append("      "+c);
 			else out.append("    "+c);
 		}
-		
+
 		out.append("\n\n");
-		
+
 		double multiplier = 0;
 		for(int c=1; c>=step; c++)
 		{
-			multiplier += 0.9*step;
+			multiplier += 1+(0.9*c);
 			if(c<=1)	out.append(c+"    "+base);
-			else out.append("  "+(base*(1+multiplier)));
+			else out.append("  "+(base*multiplier));
+			multiplier = 0;
 		}
-		
+
 		Container container = getContentPane();
 		container.add(out);
 	}
