@@ -1,10 +1,10 @@
 // Tariq
 //
-// This program will test the methods of the Grade class.
+// This program will test the methods of the U3A1 class.
 
 import javax.swing.JOptionPane;
 
-public class GradeDriver
+public class U3A1Driver
 {
 	public static void main(String[] args)
 	{
@@ -15,7 +15,7 @@ public class GradeDriver
 		numeric = JOptionPane.showInputDialog("Please enter Numeric Grade: ");
 
 		double y = Double.parseDouble(numeric);
-		Grade a = new Grade(x, y);
+		U3A1 a = new U3A1(x, y);
 		double newNumeric = a.getNewNumeric();
 		String newLetter = a.getNewLetter();
 
