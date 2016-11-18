@@ -1,15 +1,15 @@
 // Tariq
 //
-// This program will test the methods of the DataSet class.
+// This program will test the methods of the U2Test class.
 
 import java.util.Scanner;
 
-public class DataSetDriver
+public class U2TestDriver
 {
 	public static void main(String[] args)
 	{
-		DataSet a = new DataSet();
-		DataSet b = new DataSet(73, 8);
+		U2Test a = new U2Test();
+		U2Test b = new U2Test(73, 8);
 
 		Scanner in = new Scanner(System.in);
 		System.out.print("Enter Integer #1:  ");
