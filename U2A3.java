@@ -2,13 +2,13 @@
 //
 // This program calculates a worker's pay.
 
-public class TimeInterval
+public class U2A3
 {
 	private int hrs;
 	private int min;
 	private double pay;
 
-	public TimeInterval(int beginTime, int finishTime, double hourlyPay)
+	public U2A3(int beginTime, int finishTime, double hourlyPay)
 	{
 		int h1 = beginTime / 100;
 		int m1 = beginTime % 100;
