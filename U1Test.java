@@ -2,12 +2,12 @@
 //
 // This program will calculate the salary of employee "Harry".
 
-public class Employee
+public class U1Test
 {
 	private String name;
 	private double salary;
 
-	public Employee()
+	public U1Test()
 	{
 		name = "Hacker, Harry";
 		salary = 55000;
