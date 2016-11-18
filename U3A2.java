@@ -8,7 +8,7 @@ import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JOptionPane;
 
-public class TaxHelper extends JApplet
+public class U3A2 extends JApplet
 {
 	private String name;
 	private double tax = 0;
