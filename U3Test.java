@@ -2,13 +2,13 @@
 //
 // This program will simulate a mail/postage system.
 
-public class Postage
+public class U3Test
 {
         private String type;
         private double weight;
         private double cost;
 
-        public Postage(String x, double y)
+        public U3Test(String x, double y)
         {
             type = x;
             weight = y;
