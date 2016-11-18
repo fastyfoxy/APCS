@@ -1,10 +1,10 @@
 // Tariq
 //
-// This program will test the methods of the Cashier class.
+// This program will test the methods of the U2A2 class.
 
 import java.util.Scanner;
 
-public class CashierDriver
+public class U2A2Driver
 {
 	public static void main(String[] args)
 	{
@@ -17,7 +17,7 @@ public class CashierDriver
 		double y = in.nextDouble();
 		System.out.println();
 
-		Cashier a = new Cashier(x, y);
+		U2A2 a = new U2A2(x, y);
 
 		int dollars = a.getDollars();
 		int quarters = a.getQuarters();
