@@ -1,13 +1,13 @@
 // Tariq
 //
 // This class will test the methods of
-// the Employee class.
+// the U1Test class.
 
-public class U1Test
+public class U1TestDriver
 {
 	public static void main(String[] args)
 	{
-		Employee emp = new Employee();
+		U1Test emp = new U1Test();
 
 		String name;
 		double salary;
