@@ -2,12 +2,12 @@
 //
 // This program will calculate the average of a set of numbers.
 
-public class DataSet
+public class U2Test
 {
 	private int sum;
 	private int count;
 
-	public DataSet()
+	public U2Test()
 	{
 		sum = 0;
 		count = 0;
