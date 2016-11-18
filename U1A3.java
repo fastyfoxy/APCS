@@ -2,11 +2,11 @@
 //
 // This class will simulate the growth of a roach population.
 
-public class RoachPopulation
+public class U1A3
 {
 	private int roaches;
 
-	public RoachPopulation()
+	public U1A3()
 	{
 		roaches = 100;
 	}
