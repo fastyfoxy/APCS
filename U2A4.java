@@ -2,12 +2,12 @@
 //
 // This program will compute the date of Easter Sunday
 
-public class EasterSunday
+public class U2A4
 {
 	private int month;
 	private int day;
 
-	public EasterSunday(int year)
+	public U2A4(int year)
 	{
 		int y = year;
 		int a = y % 19;
