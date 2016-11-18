@@ -2,16 +2,16 @@
 //
 // This program will approximate the value of pi.
 
-public class Pi
+public class U4A2
 {
 	private static final double PI = 3.14159;
 
 	public static void main(String[] args)
 	{
-		Pi a = new Pi();
+		U4A2 a = new U4A2();
 	}
 
-	public Pi()
+	public U4A2()
 	{
 		double num = 0;
 		int c = 0;
