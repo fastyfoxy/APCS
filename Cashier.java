@@ -2,7 +2,7 @@
 //
 // This program directs a cashier on how to give change.
 
-public class Cashier
+public class U2A2
 {
 	private int dollars;
 	private int quarters;
@@ -10,7 +10,7 @@ public class Cashier
 	private int nickels;
 	private int pennies;
 
-	public Cashier(double amountdue, double amountrecieved)
+	public U2A2(double amountdue, double amountrecieved)
 	{
 		int diff = (int)(100 * amountrecieved) - (int)(100 * amountdue);
 
