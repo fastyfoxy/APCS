@@ -23,25 +23,29 @@ public class U4A3 extends JApplet
 		int step = Integer.parseInt(token3);
 		JTextArea out = new JTextArea();
 
-		out.append("	Salary Schedule\n\n");
+		Font font = new Font("Monospaced", Font.BOLD, 12);
+		out.setFont(font);
+		out.append("	  Salary Schedule\n\n");
 
 		for(int c=1; c<=lane; c++)
 		{
-			if(c==1) out.append("                "+c);
-			else out.append("            "+c);
+			if(c==1) out.append("        "+c);
+			else out.append("       "+c);
 		}
 
-		out.append("\n\n");
+		out.append("\n");
 		int baseCopy;
 		for(int c=1; c<=step; c++)
 		{
 			baseCopy = base;
-			out.append(c+"          "+baseCopy);
-
+			out.append("\n");
+			out.append(""+c);
+			if(c<10) out.append(" ");
+			out.append("    "+baseCopy);
 			for (int d=1; d<lane; d++)
 			{
 				baseCopy =(int)(baseCopy * 1.09);
-				out.append("\t" + baseCopy);
+				out.append("   " + baseCopy);
 			}
 			base = (int)(base * 1.03);
 		}
