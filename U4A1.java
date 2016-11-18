@@ -2,11 +2,11 @@
 //
 // This program will convert base 2 to base 10 numbers.
 
-public class Binary
+public class U4A1
 {
 	private String bin;
 
-	public Binary(String x)
+	public U4A1(String x)
 	{
 		bin = x;
 	}
