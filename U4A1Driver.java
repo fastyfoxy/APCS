@@ -1,6 +1,6 @@
 // Tariq
 //
-// This program will test the methods of the Binary class.
+// This program will test the methods of the U4A1 class.
 
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
@@ -8,7 +8,7 @@ import java.awt.Container;
 import javax.swing.JApplet;
 import java.awt.Font;
 
-public class BinaryDriver extends JApplet
+public class U4A1Driver extends JApplet
 {
 	public void init()
 	{
@@ -25,7 +25,7 @@ public class BinaryDriver extends JApplet
 		while(!input.equals("-1"))
 		{
 			count++;
-			x = new Binary(input);
+			x = new U4A1(input);
 			num = x.convert();
 			out.setTabSize(10-input.length());
 			out.append("Number " + count + ": " + input + " = \t" + num + "\n");
