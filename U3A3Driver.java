@@ -1,13 +1,13 @@
 // Tariq
 //
-// This program will test the methods of the Month class
+// This program will test the methods of the U3A3 class.
 
 import javax.swing.JApplet;
 import javax.swing.JTextArea;
 import java.awt.Container;
 import javax.swing.JOptionPane;
 
-public class MonthDriver extends JApplet
+public class U3A3Driver extends JApplet
 {
 	public void init()
 	{
@@ -55,7 +55,7 @@ public class MonthDriver extends JApplet
 				monthname = "December";
 		}
 
-		Month a = new Month(month);
+		U3A3 a = new U3A3(month);
 		a.setDays();
 		String days = a.getDays();
 		String b = "The month of "+monthname+"\n has "+days+" days.";
