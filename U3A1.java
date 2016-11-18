@@ -3,14 +3,14 @@
 // This program will convert letter grades into numeric grades
 // and convert numeric grades into letter grades.
 
-public class Grade
+public class U3A1
 {
 	private String origLetter;
 	private double origNumeric;
 	private String newLetter;
 	private double newNumeric;
 
-	public Grade(String x, double y)
+	public U3A1(String x, double y)
 	{
 		origLetter = x;
 		origNumeric = y;
