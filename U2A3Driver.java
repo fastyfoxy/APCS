@@ -1,11 +1,11 @@
 // Tariq
 //
 // This program will test the methods of the
-// TimeInterval class.
+// U2A3 class.
 
 import java.util.Scanner;
 
-public class TimeIntervalDriver
+public class U2A3Driver
 {
 	public static void main(String[] args)
 	{
@@ -21,7 +21,7 @@ public class TimeIntervalDriver
 		double z = in.nextDouble();
 		System.out.println();
 
-		TimeInterval t = new TimeInterval(x, y, z);
+		U2A3 t = new U2A3(x, y, z);
 
 		double pay = t.getPay();
 		int hrs = t.getHours();
