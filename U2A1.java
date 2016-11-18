@@ -2,12 +2,12 @@
 //
 // This class will simulate a product purchase.
 
-public class Product
+public class U2A1
 {
 	private String name;
 	private double cost;
 
-	public Product(String n, double c)	//parametric constructor
+	public U2A1(String n, double c)	//parametric constructor
 	{
 		name = n;
 		cost = c;
