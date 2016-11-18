@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class U4A4
 {
-	private double balance, apr, total, minimumPay;
+	private double balance, apr, profit, total, minimumPay;
 	private int months, percent;
 	
 	public static void main(String[] args)
@@ -20,22 +20,22 @@ public class U4A4
 		System.out.print("Enter credit card balance: ");
 		balance = in.nextDouble();
 		
-		System.out.print("\n\nEnter minimum monthly payment (as a % of the balance): "
+		System.out.print("\n\nEnter minimum monthly payment (as a % of the balance): ");
 		percent = in.nextInt();
 				 
 		System.out.print("\n\nEnter the annual percentage rate: ");
-		percent = in.nextInt();
-				 
-		double bal = x;
-		if((percent/100.0)*balance > 20.0) minimumPay = (percent/100.0)*balance;
-		else if (bal<20.0) pay = bal;
-		else pay = 20.0;
-		double pay = (y/100.0) * bal;
-		double apr = z;
+		apr = in.nextDouble();
+				
+		if((percent/100D)*balance > 20.0) minimumPay = (percent/100D)*balance;
+		else if (balance<20.0) minimumPay = balance;
+		else minimumPay = 20.0;
+		
+		System.out.println("\n\n\n ");
 	}
 	
 	public int getMonths()
 	{
-		
+		profit = total - balance;
+		return months;
 	}
 }
