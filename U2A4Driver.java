@@ -1,24 +1,24 @@
 // Tariq
 //
-// This program will test the methods of the EasterSunday class.
+// This program will test the methods of the U2A4 class.
 
 import java.util.Scanner;
 import java.io.*;
 
-public class EasterSundayDriver
+public class U2A4Driver
 {
 	public static void main(String[] args)
 	{
-		EasterSundayDriver app = new EasterSundayDriver();
+		U2A4 app = new U2A4();
 	}
 
-	public EasterSundayDriver()
+	public U2A4Driver()
 	{
 		Scanner in = new Scanner(System.in);
 		System.out.print("Enter the year: ");
 		int x = in.nextInt();
 
-		EasterSunday a = new EasterSunday(x);
+		U2A4 a = new U2A4(x);
 		int m = a.getMonth();
 		int d = a.getDay();
 
