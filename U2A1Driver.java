@@ -1,6 +1,6 @@
 // Tariq
 //
-// This program will test the methods of the Product class.
+// This program will test the methods of the U2A1 class.
 
 public class U2A1Driver
 {
