@@ -2,7 +2,7 @@
 //
 // This program will test the methods of the Product class.
 
-public class ProductDriver
+public class U2A1Driver
 {
 	public static void main(String[] args)
 	{
