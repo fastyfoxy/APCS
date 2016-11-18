@@ -1,9 +1,9 @@
 // Tariq
 //
 // This driver class will test the methods of the
-// RoachPopulation class.
+// U1A3 class.
 
-public class RoachPopulationDriver
+public class U1A3Driver
 {
 	public static void main(String[] args)
 	{
