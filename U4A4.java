@@ -32,7 +32,7 @@ public class U4A4
 
 	public int getMonths()
 	{
-       if((percent/100D)*balance > 20.0) minimumPay = (percent/100D)*balance;
+         if((percent/100D)*balance > 20.0) minimumPay = (percent/100D)*balance;
 		else if (balance<20.0) minimumPay = balance;
 		else minimumPay = 20.0;
 
