@@ -26,16 +26,16 @@ public class U4A4
 		System.out.print("\nEnter the annual percentage rate: ");
 		apr = in.nextDouble();
 
-		if((percent/100D)*balance > 20.0) minimumPay = (percent/100D)*balance;
-		else if (balance<20.0) minimumPay = balance;
-		else minimumPay = 20.0;
-
 		System.out.println("\n\nNumber of months to pay off debt: "+months);
 		System.out.println("\nProfit for the credit company = "+profit+"\n"); //PROFIT HAS TO BE STRING.FORMAT'ED
 	}
 
 	public int getMonths()
 	{
+      if((percent/100D)*balance > 20.0) minimumPay = (percent/100D)*balance;
+		else if (balance<20.0) minimumPay = balance;
+		else minimumPay = 20.0;
+
 		profit = total - balance;
 		return months;
 	}
