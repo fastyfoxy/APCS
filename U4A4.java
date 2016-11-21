@@ -27,7 +27,7 @@ public class U4A4
 		apr = in.nextDouble();
 
 		System.out.println("\n\nNumber of months to pay off debt: "+months);
-		System.out.println("\nProfit for the credit company = "+profit+"\n"); //PROFIT HAS TO BE STRING.FORMAT'ED
+		System.out.printf("\nProfit for the credit company = "+profit+"\n"); //PROFIT HAS TO BE STRING.FORMAT'ED
 	}
 
 	public int getMonths()
