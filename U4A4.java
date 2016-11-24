@@ -6,8 +6,8 @@ import java.util.Scanner;
 
 public class U4A4
 {
-	private double balance, apr, profit, total, minimumPay;
-	private int months, percent;
+	private double balance, apr, profit, total;
+	private int percent, months;
 
 	public static void main(String[] args)
 	{
@@ -24,17 +24,36 @@ public class U4A4
 		percent = in.nextInt();
 
 		System.out.print("\nEnter the annual percentage rate: ");
-		apr = in.nextDouble();
+		apr = in.nextDouble() / 100.0;
 
-		System.out.println("\n\nNumber of months to pay off debt: "+months);
-		System.out.printf("\nProfit for the credit company = "+profit+"\n");
+		System.out.println("\n\nNumber of months to pay off debt: "+getMonths(balance));
+		System.out.printf("\nProfit for the credit card company = $%.2f",profit);
+		System.out.println("\n");
 	}
 
-	public int getMonths()
+	public int getMonths(double balance)
 	{
-        if((percent/100D)*balance > 20.0) minimumPay = (percent/100D)*balance;
-		else if (balance<20.0) minimumPay = balance;
-		else minimumPay = 20.0;
+		double newBalance = 0;
+		double minimumPay = balance*percent/100.0;
+
+		if(balance<20) minimumPay = balance*(1+apr/12);
+		else
+		{
+			if(minimumPay < 20) minimumPay = 20;
+			else minimumPay = minimumPay;
+		}
+
+		total+=minimumPay;
+		if(balance < 20) total-=(balance * (1 + apr / 12) - balance);
+		else total-=0;
+		newBalance = balance*(1+apr/12) - minimumPay;
+
+		months++;
+
+		if(newBalance!=0)
+		{
+			getMonths(newBalance);
+		}
 
 		profit = total - balance;
 		return months;
