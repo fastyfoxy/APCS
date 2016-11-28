@@ -1,0 +1,13 @@
+// Tariq
+//
+//
+
+import javax.swing.Applet;
+
+public class U4Test extends Applet
+{
+  public void init()
+  {
+    long start = System.currentTimeMillis();
+  }
+}
