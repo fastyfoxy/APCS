@@ -20,7 +20,7 @@ public class U4Test extends JApplet
 		long base = Integer.parseInt(input);
 
 		long start = System.currentTimeMillis();
-		int prime = 0;		// ITERATIVE ALGORITHM GOES HERE		http://stackoverflow.com/questions/9625663/calculating-and-printing-the-nth-prime-number
+		int prime = 0;		// ALGORITHM
 		long end = System.currentTimeMillis();
 		int time = (int) (end - start);
 
