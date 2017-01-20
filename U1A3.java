@@ -1,4 +1,4 @@
-// Tariq
+// Name
 //
 // This class will simulate the growth of a roach population.
 
