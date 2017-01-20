@@ -1,4 +1,4 @@
-// Tariq
+// Name
 //
 // This program will act as an online tax helper.
 
