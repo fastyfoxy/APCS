@@ -1,4 +1,4 @@
-// Tariq
+// Name
 //
 // This program displays a face on
 // the console window.
