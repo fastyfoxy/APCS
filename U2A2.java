@@ -1,4 +1,4 @@
-// Tariq
+// Name
 //
 // This program directs a cashier on how to give change.
 
