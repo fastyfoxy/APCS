@@ -1,4 +1,4 @@
-// Tariq
+// Name
 //
 // This program will tell the user the number of days in a month
 
