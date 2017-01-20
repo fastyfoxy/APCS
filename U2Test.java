@@ -1,4 +1,4 @@
-//Tariq
+// Name
 //
 // This program will calculate the average of a set of numbers.
 
