@@ -1,4 +1,4 @@
-// Tariq
+// Name
 //
 // This program calculates a worker's pay.
 
