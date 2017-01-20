@@ -1,4 +1,4 @@
-// Tariq
+// Name
 //
 // This class will simulate a product purchase.
 
