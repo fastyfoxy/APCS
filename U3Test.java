@@ -1,4 +1,4 @@
-// Tariq
+// Name
 //
 // This program will simulate a mail/postage system.
 
