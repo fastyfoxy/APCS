@@ -1,4 +1,4 @@
-// Tariq
+// Name
 //
 // This class will test the methods of
 // the U1Test class.
