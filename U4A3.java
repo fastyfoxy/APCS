@@ -1,4 +1,4 @@
-// Tariq
+// Name
 //
 // This program will create a salary schedule for teachers at any school.
 
