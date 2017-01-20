@@ -1,4 +1,4 @@
-// Tariq
+// Name
 //
 // This progarm  will determine the number of months it will take to completely pay off debt.
 
