@@ -1,4 +1,4 @@
-// Tariq
+// Name
 //
 // This program prints arrays to an applet & resizes when neccesary.
 
