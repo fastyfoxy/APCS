@@ -1,4 +1,4 @@
-// Tariq
+// Name
 //
 // This program will convert letter grades into numeric grades
 // and convert numeric grades into letter grades.
