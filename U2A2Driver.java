@@ -1,4 +1,4 @@
-// Tariq
+// Name
 //
 // This program will test the methods of the U2A2 class.
 
