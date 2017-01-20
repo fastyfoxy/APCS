@@ -1,4 +1,4 @@
-// Tariq
+// Name
 //
 // This program will compute the date of Easter Sunday
 
