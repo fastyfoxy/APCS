@@ -1,4 +1,4 @@
-// Tariq
+// Name
 //
 // This program will convert base 2 to base 10 numbers.
 
