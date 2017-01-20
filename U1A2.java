@@ -1,4 +1,4 @@
-// Tariq
+// Name
 //
 // This program will construct 5 rectangles
 // and print them to the console window.
