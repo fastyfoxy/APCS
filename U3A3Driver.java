@@ -1,4 +1,4 @@
-// Tariq
+// Name
 //
 // This program will test the methods of the U3A3 class.
 
