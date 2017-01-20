@@ -1,4 +1,4 @@
-// Tariq
+// Name
 //
 // This program will approximate the value of pi.
 
