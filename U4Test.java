@@ -1,6 +1,6 @@
-// Tariq
+// Name
 //
-// This program will find and print the first Prime number
+// This program will find and print the first prime number
 // larger than the number inputted by the user.
 
 import javax.swing.JOptionPane;
@@ -42,23 +42,8 @@ public class U4Test extends JApplet
 		container.add(out);
 	}
 
-	/*boolean isPrime(long n)
-	{
-		if(n%2==0 || n%3==0) return false;
-		long sqrt = Math.sqrt(n)+1;
-		for(long i=6; i<=sqrt; i+=6)
-			if(n%(i-1)==0 || n%(i+1)==0) return false;
-		return true;
-	}*/
-
 	boolean isPrime(long n)
 	{
-	    if(n%2==0 || n%3==0) return false;
-	    long sqrt=(long)Math.sqrt(n)+1;
-	    for(long i=6; i<=sqrt; i+=6)
-	    {
-	        if(n%(i-1)==0 || n%(i+1)==0) return false;
-	    }
-	    return true;
+		//<prime checking algorithm>
 	}
 }
