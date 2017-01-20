@@ -1,4 +1,4 @@
-// Tariq
+// Name
 //
 // This program will calculate the salary of employee "Harry".
 
