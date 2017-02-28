@@ -2,26 +2,18 @@
 //
 // This program will simulate a bank account.
 
-import java.util.Random;
-
 public class BankAccount
 {
-	private static int lastAssignedNumber = 100;
-	private static final double RATE = 4.0;
-	public int accountNumber;
+	private String accountType;
+	private static final double RATE = .04;
+	private String accountNumber;
 	private double balance;
 
-	public BankAccount()
+	public BankAccount(String accNum, double bal)
 	{
-		setAccountBalance();
-		setAccountNumber();
-		accountNumber = lastAssignedNumber++;
-	}
-
-	public BankAccount(double money)
-	{
-		balance = money;
-		setAccountNumber();
+		setAccountType(accNum);
+		accountNumber = accNum;
+		balance = bal;
 	}
 
 	public String deposit(double money)
@@ -34,7 +26,7 @@ public class BankAccount
 
 		else
 		{
-			return "Desposit Rejected";
+			return "Desposit Rejected - Insufficient Funds";
 		}
 	}
 
@@ -52,25 +44,28 @@ public class BankAccount
 		}
 	}
 
-	public void interest()
+	public void calculateInterest()
 	{
-		balance = balance*(1+(RATE/100.0));
+		if(accountType.equals("s"))
+		{
+			balance = balance*(1+RATE);
+		}
 	}
 
-	public void setAccountNumber()
+	public void setAccountType(String string)
 	{
-		accountNumber = lastAssignedNumber++;
+		String type = string.substring(3, 4);
+		accountType = type;
 	}
 
-	public void setAccountBalance()
+	public void setBalance(double money)
 	{
-		Random gen = new Random();
-		balance = 1000*gen.nextDouble();
+		balance = money;
 	}
 
-	public int getAccountNumber()
+	public static double getRate()
 	{
-		return accountNumber;
+		return RATE;
 	}
 
 	public double getBalance()
@@ -78,8 +73,18 @@ public class BankAccount
 		return balance;
 	}
 
-	public static double getRate()
+	public String getAccountNumber()
 	{
-		return RATE;
+		return accountNumber;
+	}
+
+	public int getAccountNum()
+	{
+		return Integer.parseInt(accountNumber.substring(0,3));
+	}
+
+	public String getAccountType()
+	{
+		return accountType;
 	}
 }
