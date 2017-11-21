@@ -1,43 +1,30 @@
-// Name
-//
-// This program calculates a worker's pay.
+// This program will test the methods of the Pay class.
+
+import java.util.Scanner;
 
 public class U2A3
 {
-	private int hrs;
-	private int min;
-	private double pay;
-
-	public U2A3(int beginTime, int finishTime, double hourlyPay)
+	public static void main(String[] args)
 	{
-		int h1 = beginTime / 100;
-		int m1 = beginTime % 100;
-		int t1 = h1 * 60 + m1;
+		Scanner in = new Scanner(System.in);
 
-		int h2 = finishTime / 100;
-		int m2 = finishTime % 100;
-		int t2 = h2 * 60 + m2;
+		System.out.print("Please enter the starting time: ");
+		int x = in.nextInt();
 
-		int time = t2 - t1;
+		System.out.print("Please enter the finishing time: ");
+		int y = in.nextInt();
 
-		hrs = time / 60;
-		min = time % 60;
+		System.out.print("Plese enter rate of pay: ");
+		double z = in.nextDouble();
+		System.out.println();
 
-		pay = hourlyPay * (hrs + min/60.0);
-	}
+		Pay t = new Pay(x, y, z);
 
-	public int getHours()
-	{
-		return hrs;
-	}
+		double pay = t.getPay();
+		int hrs = t.getHours();
+		int min = t.getMinutes();
 
-	public int getMinutes()
-	{
-		return min;
-	}
-
-	public double getPay()
-	{
-		return pay;
+		System.out.println("Time on Task = " + hrs + " hours " + min + " minutes\n");
+		System.out.printf("Pay = $%-5.2f%n", pay);
 	}
 }

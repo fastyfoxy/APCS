@@ -1,5 +1,3 @@
-// Tariq
-//
 // This program will test the methods of the BankAccount class.
 
 import javax.swing.JTextArea;
@@ -42,8 +40,7 @@ public class U7A2 extends JFrame
 	{
 		try
 		{
-			Scanner reader = new Scanner(new File
-				("U:\\STUDENT\\PROJECTS\\West Projects\\Computer Science\\JavaData\\myCreditUnion.txt"));
+			Scanner reader = new Scanner(new File("myCreditUnion.txt"));
 
 			while(reader.hasNext())
 			{

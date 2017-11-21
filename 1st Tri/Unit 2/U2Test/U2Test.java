@@ -1,44 +1,38 @@
-// Name
-//
-// This program will calculate the average of a set of numbers.
+// This program will test the methods of the U2Test class.
+
+import java.util.Scanner;
 
 public class U2Test
 {
-	private int sum;
-	private int count;
-
-	public U2Test()
+	public static void main(String[] args)
 	{
-		sum = 0;
-		count = 0;
-	}
+		Averager a = new Averager();
+		Averager b = new Averager(73, 8);
 
-	public DataSet(int x, int y)
-	{
-		sum = x;
-		count = y;
-	}
+		Scanner in = new Scanner(System.in);
+		System.out.print("Enter Integer #1:  ");
+		int x1 = in.nextInt();
+		System.out.print("Enter Integer #2:  ");
+		int x2 = in.nextInt();
+		System.out.print("Enter Integer #3:  ");
+		int x3 = in.nextInt();
+		System.out.print("Enter Integer #4:  ");
+		int x4 = in.nextInt();
 
-	public void addValue(int x)
-	{
-		sum = sum + x;
-		count = count+1;
-	}
+		a.addValue(x1);
+		a.addValue(x2);
+		a.addValue(x3);
+		a.addValue(x4);
+		b.addValue(x1);
+		b.addValue(x2);
+		b.addValue(x3);
+		b.addValue(x4);
 
-	public double average()
-	{
-		double ans;
-		ans = (double)sum/count;
-		return ans;
-	}
+		double avg1 = a.average();
+		double avg2 = b.average();
+		System.out.println();
+		System.out.printf("Default Constructor Average    = %-4.1f%n", avg1);
+		System.out.printf("Parametric Constructor Average = %-4.1f%n", avg2);
 
-	public int getSum()
-	{
-		return sum;
-	}
-
-	public int getCount()
-	{
-		return count;
 	}
 }

@@ -1,26 +1,41 @@
-// Name
-//
-// This program will convert base 2 to base 10 numbers.
+// This program will test the methods of the NumberConverter class.
 
-public class U4A1
+import javax.swing.JOptionPane;
+import javax.swing.JTextArea;
+import java.awt.Container;
+import javax.swing.JApplet;
+import java.awt.Font;
+
+public class U4A1 extends JApplet
 {
-	private String bin;
-
-	public U4A1(String x)
+	public void init()
 	{
-		bin = x;
-	}
+		int count = 0;
+		int sum = 0;
+		int num;
+		String input = JOptionPane.showInputDialog("Enter Binary Number: ");
+		NumberConverter x;
 
-	public int convert()
-	{
-		int result = 0;
-		int counter = 0;
-		String exp = bin;
-		while(exp.length()>0)
+		JTextArea out = new JTextArea();
+		out.setFont(new Font("Monospaced", Font.BOLD, 16));
+		out.setText("Results of U4A1\n\n");
+
+		while(!input.equals("-1"))
 		{
-			result += (Integer.parseInt(exp.substring(0, 1))) * Math.pow(2, exp.length()-1);
-			exp = exp.substring(1);
+			count++;
+			x = new NumberConverter(input);
+			num = x.convert();
+			out.setTabSize(10-input.length());
+			out.append("Number " + count + ": " + input + " = \t" + num + "\n");
+			sum += num;
+			input = JOptionPane.showInputDialog("Enter Binary Number: ");
 		}
-		return result;
+
+		String mean = String.format("%.2f", (double) sum / count);
+		out.append("\nNumber of Numbers = " + count);
+		out.append("\nAccumulated Value = " + sum);
+		out.append("\nMean              = " + mean);
+		Container a = getContentPane();
+		a.add(out);
 	}
 }

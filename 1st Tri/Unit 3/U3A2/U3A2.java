@@ -1,5 +1,3 @@
-// Name
-//
 // This program will act as an online tax helper.
 
 import javax.swing.JApplet;

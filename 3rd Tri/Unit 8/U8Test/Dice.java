@@ -1,5 +1,3 @@
-// Tariq
-//
 // This program will structure an object representing two die rolls.
 
 public class Dice implements Measurable

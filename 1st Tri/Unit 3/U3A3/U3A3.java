@@ -1,38 +1,66 @@
-// Name
-//
-// This program will tell the user the number of days in a month
+// This program will test the methods of the MonthFinder class.
 
-public class U3A3
+import javax.swing.JApplet;
+import javax.swing.JTextArea;
+import java.awt.Container;
+import javax.swing.JOptionPane;
+
+public class U3A3 extends JApplet
 {
-	private int month;
-	private String days;
-
-	public Month(int x)
+	public void init()
 	{
-		month = x;
-		setDays();
-	}
 
-	public void setDays()
-	{
+		String monthname;
+		String input = JOptionPane.showInputDialog("Please enter month as a number: ");
+		int month = Integer.parseInt(input);
+
 		switch(month)
 		{
+			case 1:
+				monthname = "January";
+				break;
 			case 2:
-				days = "28 or 29";
+				monthname = "Febuary";
+				break;
+			case 3:
+				monthname = "March";
 				break;
 			case 4:
+				monthname = "April";
+				break;
+			case 5:
+				monthname = "May";
+				break;
 			case 6:
+				monthname = "June";
+				break;
+			case 7:
+				monthname = "July";
+				break;
+			case 8:
+				monthname = "August";
+				break;
 			case 9:
+				monthname = "September";
+				break;
+			case 10:
+				monthname = "October";
+				break;
 			case 11:
-				days = "30";
+				monthname = "November";
 				break;
 			default:
-				days = "31";
+				monthname = "December";
 		}
-	}
 
-	public String getDays()
-	{
-		return days;
+		MonthFinder a = new MonthFinder(month);
+		a.setDays();
+		String days = a.getDays();
+		String b = "The month of "+monthname+"\n has "+days+" days.";
+		JTextArea output = new JTextArea();
+		output.setText(b);
+
+		Container x = getContentPane();
+		x.add(output);
 	}
 }

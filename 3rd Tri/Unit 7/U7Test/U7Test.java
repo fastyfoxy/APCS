@@ -1,5 +1,3 @@
-// Tariq
-//
 // This program will test the methods of BBPlayer.
 
 import javax.swing.JTextArea;

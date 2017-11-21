@@ -1,28 +1,26 @@
-// Name
-//
-// This class will simulate the growth of a roach population.
+// This driver class will test the methods of the RoachPopulation class.
 
 public class U1A3
 {
-	private int roaches;
-
-	public U1A3()
+	public static void main(String[] args)
 	{
-		roaches = 100;
-	}
+		int x;
+		RoachPopulation r = new RoachPopulation();
 
-	public void timePasses()
-	{
-		roaches = 2 * roaches;
-	}
+		r.timePasses();
+		x = r.getRoaches();
+		System.out.println("Population = " + x);
 
-	public void spray()
-	{
-		roaches = (int)(0.25 * roaches);
-	}
+		r.spray();
+		x = r.getRoaches();
+		System.out.println("Population = " + x);
 
-	public int getRoaches()
-	{
-		return roaches;
+		r.spray();
+		x = r.getRoaches();
+		System.out.println("Population = " + x);
+
+		r.timePasses();
+		x = r.getRoaches();
+		System.out.println("Population = " + x);
 	}
 }

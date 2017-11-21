@@ -1,7 +1,4 @@
-// Colleague #2
-//
-// This is the code for the Board class.
-// It uses a 2-D array of Pieces.
+// This program sets up a Board using a 2-D array of Pieces.
 
 import java.awt.Font;
 

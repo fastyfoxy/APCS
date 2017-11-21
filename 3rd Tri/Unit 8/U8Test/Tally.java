@@ -1,5 +1,3 @@
-// Tariq
-//
 // This program will tally up the different outcomes of each situation.
 
 public class Tally

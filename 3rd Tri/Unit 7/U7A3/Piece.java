@@ -1,8 +1,4 @@
-// Colleague #1
-//
-// This is the code for the Piece class.
-// In the Tic-Tac-Toe game, a Piece will be either
-// an X or an O.
+// This program will make a piece, either an "X" or an "O".
 
 public class Piece
 {

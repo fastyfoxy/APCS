@@ -1,4 +1,3 @@
-// Name
 // This program will find the mean & correlation between two integer arrays.
 
 public class U5A1

@@ -1,5 +1,3 @@
-// Tariq
-//
 // This program will test the sequential and binary searches.
 
 import javax.swing.JTextArea;
@@ -10,7 +8,6 @@ import java.awt.Font;
 
 public class U6A3 extends JApplet
 {
-
 	private int[] targets = {2, 2629, 11176, 27032, 43661};
 	private JTextArea out = new JTextArea();
 	private int[] array = new int[300];

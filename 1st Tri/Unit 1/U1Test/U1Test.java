@@ -1,35 +1,29 @@
-// Name
-//
-// This program will calculate the salary of employee "Harry".
+// This class will test the methods of the SalaryManager class.
 
 public class U1Test
 {
-	private String name;
-	private double salary;
-
-	public U1Test()
+	public static void main(String[] args)
 	{
-		name = "Hacker, Harry";
-		salary = 55000;
-	}
+		SalaryManager sal = new SalaryManager();
 
-	public double getSalary()
-	{
-		return salary;
-	}
+		String name;
+		double salary;
 
-	public String getName()
-	{
-		return name;
-	}
+		String x = sal.getName();
+		double a = sal.getSalary();
+		System.out.print("Name = " + x);
+		System.out.println("   Salary = " + a);
 
-	public void raiseSalary(double x)
-	{
-		salary = (1+x/100) * salary;
-	}
+		sal.raiseSalary(4);
+		double b = sal.getSalary();
+		System.out.println("Salary = " + b);
 
-	public void bonus(int y)
-	{
-		salary = y + salary;
+		sal.bonus(200);
+		double c = sal.getSalary();
+		System.out.println("Salary = " + c);
+
+		sal.raiseSalary(5.5);
+		double d = sal.getSalary();
+		System.out.println("Salary = " + d);
 	}
 }

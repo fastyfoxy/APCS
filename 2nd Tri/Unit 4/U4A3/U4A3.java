@@ -1,6 +1,4 @@
-// Name
-//
-// This program will create a salary schedule for teachers at any school.
+// This program will create a salary schedule.
 
 import java.util.StringTokenizer;
 import javax.swing.JOptionPane;

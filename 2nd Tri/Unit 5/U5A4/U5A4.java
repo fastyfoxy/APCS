@@ -1,5 +1,3 @@
-// Name
-//
 // This program will simulate "The Game of Life".
 
 import javax.swing.JTextArea;

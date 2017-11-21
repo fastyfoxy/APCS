@@ -1,56 +1,61 @@
-// Name
-//
-// This program will simulate a simplified version of the Iowa lottery game.
+// This program will test the methods of the Lottery class.
 
 public class U5A2
 {
-	private int[] numbers = new int[5];
-	private int powerball;
-
-	public U5A2()
+	public static void main(String[] args)
 	{
-		int[] smart = new int[59];
-		int num;
+		Lottery a = new Lottery();
+		int[] N = a.getNumbers();
+		System.out.println("This Week's Numbers Are:\n"+N[0]+"  "+N[1]+"  "
+		+N[2]+"  "+N[3]+"  "+N[4]+"  "+a.getPowerball());
 
-		for(int i = 1; i<=59; i++)	smart[i-1] = i;
+		int c4 = 0;
+		int c7 = 0;
+		int c100 = 0;
+		int c10000 = 0;
+		int chalfmil = 0;
+		int cmil = 0;
 
-		for(int i=0; i<numbers.length; i++)
+		for(int i = 1; i<=1000000; i++)
 		{
-			do num = (int)(58*Math.random()+1);
-			while(smart[num] == 0);
+			int[] smart = new int[59];
+			int[] nums = new int[5];
+			int num;
 
-			numbers[i] = smart[num];
-			smart[num] = 0;
+			for(int c = 1; c<=59; c++)	smart[c-1] = c;
+
+			for(int j=0; j<nums.length; j++)
+			{
+				do num = (int)(58*Math.random()+1);
+				while(smart[num] == 0);
+
+				nums[j] = smart[num];
+				smart[num] = 0;
+			}
+
+			int powerball = (int)((35-1+1)*Math.random()+1);
+
+			int amt = a.check(nums, powerball);
+
+			if(amt>=10000)
+			{
+				System.out.println("\nPlayer #"+i+" wins: $"+a.check(nums, powerball));
+				System.out.println(nums[0]+"  "+nums[1]+"  "+nums[2]+"  "+nums[3]+"  "+nums[4]+"  "+powerball);
+			}
+
+			if(amt == 4) c4++;
+			if(amt == 7) c7++;
+			if(amt == 100) c100++;
+			if(amt == 10000) c10000++;
+			if(amt == 500000) chalfmil++;
+			if(amt == 1000000) cmil++;
 		}
 
-		powerball = (int)((35-1+1)*Math.random()+1);
-	}
-
-	public int check(int[] nums, int pb)
-	{
-		int numsmatch = 0;
-		for(int i=0; i<5; i++) for(int c=0; c<5; c++) if(nums[i] == numbers[c]) numsmatch++;
-
-		if((numsmatch == 5) && (pb == powerball)) return 1000000;
-		if((numsmatch == 5) && (pb != powerball)) return 500000;
-		if((numsmatch == 4) && (pb == powerball)) return 10000;
-		if((numsmatch == 4) && (pb != powerball)) return 100;
-		if((numsmatch == 3) && (pb == powerball)) return 100;
-		if((numsmatch == 3) && (pb != powerball)) return 7;
-		if((numsmatch == 2) && (pb == powerball)) return 7;
-		if((numsmatch == 1) && (pb == powerball)) return 4;
-		if((numsmatch == 0) && (pb == powerball)) return 4;
-		if((numsmatch == 0) && (pb != powerball)) return 0;
-		return 0;
-	}
-
-	public int[] getNumbers()
-	{
-		return numbers;
-	}
-
-	public int getPowerball()
-	{
-		return powerball;
+		System.out.println("\n$4 Winners:         "+c4);
+		System.out.println("$7 Winners:         "+c7);
+		System.out.println("$100 Winners:       "+c100);
+		System.out.println("$10,000 Winners:    "+c10000);
+		System.out.println("$500,000 Winners:   "+chalfmil);
+		System.out.println("$1,000,000 Winners: "+cmil);
 	}
 }

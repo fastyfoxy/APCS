@@ -1,5 +1,3 @@
-// Tariq
-//
 // This program will simulate a bank account.
 
 public class BankAccount implements Measurable

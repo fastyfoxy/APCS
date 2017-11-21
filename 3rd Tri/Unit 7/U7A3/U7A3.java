@@ -1,6 +1,4 @@
-// Tariq
-//
-// This program will play a game of tic tac toe using the Piece and Board classes.
+// This program will start a game of tic tac toe using the Piece and Board classes.
 
 import javax.swing.JOptionPane;
 

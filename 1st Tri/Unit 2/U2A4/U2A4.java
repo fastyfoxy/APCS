@@ -1,40 +1,46 @@
-// Name
-//
-// This program will compute the date of Easter Sunday
+// This program will test the methods of the EasterSunday class.
+
+import java.util.Scanner;
+import java.io.*;
 
 public class U2A4
 {
-	private int month;
-	private int day;
-
-	public U2A4(int year)
+	public static void main(String[] args)
 	{
-		int y = year;
-		int a = y % 19;
-		int b = y / 100;
-		int c = y % 100;
-		int d = b / 4;
-		int e = b % 4;
-		int g = (8 * b + 13) / 25;
-		int h = (19 * a + b - d - g + 15) % 30;
-		int j = c / 4;
-		int k = c % 4;
-		int m = (a + 11 * h) / 319;
-		int r = (2 * e + 2 * j - k - h + m + 32) % 7;
-		int n = (h - m + r + 90) / 25;
-		int p = (h - m + r + n + 19) % 32;
-
-		month = n;
-		day = p;
+		U2A4 app = new U2A4();
 	}
 
-	public int getMonth()
+	public U2A4()
 	{
-		return month;
+		Scanner in = new Scanner(System.in);
+		System.out.print("Enter the year: ");
+		int x = in.nextInt();
+
+		EasterSunday a = new EasterSunday(x);
+		int m = a.getMonth();
+		int d = a.getDay();
+
+		String name = getMonthName(m);
+
+		System.out.println("Easter Sunday is on " + name + d + ".");
 	}
 
-	public int getDay()
+
+	public String getMonthName(int m)
 	{
-		return day;
+		Scanner in;
+
+		try
+		{
+			in = new Scanner(new File("U:\\STUDENT\\PROJECTS\\West Projects\\Computer Science\\JavaData\\U2A4.txt"));
+		}
+		catch (IOException e)
+		{
+			throw new RuntimeException(e.toString());
+		}
+
+		String inputLine = in.nextLine();
+		String name = inputLine.substring((m-1)*9, m*9);
+		return name;
 	}
 }

@@ -1,7 +1,4 @@
-// Name
-//
-// This program displays a face on
-// the console window.
+// This program displays a face on the console window.
 
 public class U1A1
 {

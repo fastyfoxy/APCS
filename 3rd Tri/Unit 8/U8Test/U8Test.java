@@ -1,5 +1,3 @@
-// Tariq
-//
 // This program will test the methods of Dice, Quiz, Tally, and the Measurable interface.
 
 import javax.swing.JTextArea;

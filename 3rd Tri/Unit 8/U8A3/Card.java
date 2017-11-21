@@ -1,5 +1,3 @@
-// Tariq
-//
 // This program will structure the Card object.
 
 public class Card implements Comparable

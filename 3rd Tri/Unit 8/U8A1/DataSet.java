@@ -1,5 +1,3 @@
-// Tariq
-//
 // This program handles statistical analyses on Measurable classes.
 
 public class DataSet

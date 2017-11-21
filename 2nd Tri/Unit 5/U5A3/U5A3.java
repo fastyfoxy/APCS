@@ -1,5 +1,3 @@
-// Name
-//
 // This program prints arrays to an applet & resizes when neccesary.
 
 import javax.swing.JOptionPane;
@@ -74,7 +72,6 @@ public class U5A3 extends JApplet
 			array[j] = num;
 			dataSize++;
 		}
-
 		catch(ArrayIndexOutOfBoundsException e)
 		{
 			JOptionPane.showMessageDialog(null, "Index Out of Bounds - Resizing Array", "U5A3", JOptionPane.ERROR_MESSAGE);

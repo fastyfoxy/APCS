@@ -1,41 +1,37 @@
-// Name
-//
-// This class will simulate a product purchase.
+// This program will test the methods of the Product class.
 
 public class U2A1
 {
-	private String name;
-	private double cost;
-
-	public U2A1(String n, double c)	//parametric constructor
+	public static void main(String[] args)
 	{
-		name = n;
-		cost = c;
-	}
+		Product a = new Product("Jeans", 34.95);
+		Product b = new Product("Sweater", 49.99);
+		Product c = new Product("Shoes", 99.95);
 
-	public void discount(int percent)
-	{
-		cost = (double) (100-percent)/100 * cost;
-	}
+		a.discount(30);
+		a.tax();
+		b.discount(40);
+		b.discount(30);
+		b.tax();
+		c.dollarsOff(5);
+		c.discount(30);
+		c.tax();
 
-	public void dollarsOff(int dollars)
-	{
-		cost = (double) cost - dollars;
-	}
+		String aname, bname, cname;
+		double acost, bcost, ccost;
 
-	public void tax()
-	{
-		final double TAX_RATE = 0.065;
-		cost = (double) (TAX_RATE * cost) + cost;
-	}
+		aname = a.getName();
+		bname = b.getName();
+		cname = c.getName();
+		acost = a.getCost();
+		bcost = b.getCost();
+		ccost = c.getCost();
 
-	public String getName()
-	{
-		return name;
-	}
-
-	public double getCost()
-	{
-		return cost;
+		System.out.printf("Item: %-7s%n", aname);
+		System.out.printf("Cost: $ %-5.2f%n%n", acost);
+		System.out.printf("Item: %-7s%n", bname);
+		System.out.printf("Cost: $ %-5.2f%n%n", bcost);
+		System.out.printf("Item: %-7s%n", cname);
+		System.out.printf("Cost: $ %-5.2f%n", ccost);
 	}
 }

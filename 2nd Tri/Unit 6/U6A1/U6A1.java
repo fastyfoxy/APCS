@@ -1,6 +1,4 @@
-// Tariq
-//
-// This program will test two sorting methods.
+// This program will test the selection sort and insertion sort methods.
 
 import javax.swing.JTextArea;
 import javax.swing.JApplet;
@@ -10,7 +8,6 @@ import java.awt.Font;
 
 public class U6A1 extends JApplet
 {
-
 	private JTextArea out = new JTextArea();
 	private int[] array1 = new int[10000];
 	private int[] array2 = new int[10000];

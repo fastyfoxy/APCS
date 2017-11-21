@@ -1,5 +1,3 @@
-// Tariq
-//
 // This program will structure an object representing the results of a quiz.
 
 public class Quiz implements Measurable

@@ -1,37 +1,29 @@
-// Name
-//
-// This program will simulate a mail/postage system.
+// This program will test the methods of the Postage class.
 
-public class U3Test
+import javax.swing.JOptionPane;
+import javax.swing.JApplet;
+import java.awt.Graphics;
+import java.awt.Color;
+
+public class U3Test extends JApplet
 {
-        private String type;
-        private double weight;
-        private double cost;
+	double cost;
+    public void init()
+    {
+        String input = JOptionPane.showInputDialog("Enter Postage Type & ounces, separated by a space:");
+        double weight = Double.parseDouble(input.substring(2));
+        String type = input.substring(0,1);
+        Postage a = new Postage(type, weight);
+        cost = a.calculate();
+        setBackground(Color.white);
+   	}
 
-        public U3Test(String x, double y)
-        {
-            type = x;
-            weight = y;
-        }
-
-        public double calculate()
-        {
-            if("F".equals(type))
-            {
-					cost = 0.34 + 0.21 * Math.ceil((weight-1));
-					if(weight>13) type = "P";
-            }
-            if("P".equals(type))
-            {
-                if(weight<=16.00) cost = 3.50;
-                if(weight>16.00 && weight<=32.00) cost = 3.95;
-                if(weight>32.00)
-                {
-					cost +=3.95;
-                    double x = Math.ceil((weight - 32.00) / 16.00);
-                    cost = cost + 1.20 * x;
-                }
-            }
-            return cost;
-        }
+    public void paint(Graphics g)
+    {
+		g.setColor(Color.black);
+		String out = "Cost to mail this item =";
+		String result = String.format("$ %1.2f", cost);
+		g.drawString(out, 10, 50);
+		g.drawString(result, 26, 70);
+    }
 }

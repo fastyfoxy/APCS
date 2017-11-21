@@ -1,6 +1,4 @@
-// Tariq
-//
-// This program is an interface which combines two programs.
+// This interface combines two programs.
 
 public interface Measurable
 {

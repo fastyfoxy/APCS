@@ -1,56 +1,32 @@
-// Name
-//
-// This program directs a cashier on how to give change.
+// This program will test the methods of the CashRegister class.
+
+import java.util.Scanner;
 
 public class U2A2
 {
-	private int dollars;
-	private int quarters;
-	private int dimes;
-	private int nickels;
-	private int pennies;
-
-	public U2A2(double amountdue, double amountrecieved)
+	public static void main(String[] args)
 	{
-		int diff = (int)(100 * amountrecieved) - (int)(100 * amountdue);
+		Scanner in = new Scanner(System.in);
 
-		dollars = (diff/100);
-		diff = diff % 100;
+		System.out.print("Enter Amount Due: ");
+		double x = in.nextDouble();
 
-		quarters = (diff/25);
-		diff = diff % 25;
+		System.out.print("Enter Amount Received: ");
+		double y = in.nextDouble();
+		System.out.println();
 
-		dimes = (diff/10);
-		diff = diff % 10;
+		CashRegister a = new CashRegister(x, y);
 
-		nickels = (diff/5);
-		diff = diff % 5;
+		int dollars = a.getDollars();
+		int quarters = a.getQuarters();
+		int dimes = a.getDimes();
+		int nickels = a.getNickels();
+		int pennies = a.getPennies();
 
-		pennies = diff;
-	}
-
-	public int getDollars()
-	{
-			return dollars;
-	}
-
-	public int getQuarters()
-	{
-			return quarters;
-	}
-
-	public int getDimes()
-	{
-			return dimes;
-	}
-
-	public int getNickels()
-	{
-			return nickels;
-	}
-
-	public int getPennies()
-	{
-			return pennies;
+		System.out.println("Dollars  = " + dollars);
+		System.out.println("Quarters = " + quarters);
+		System.out.println("Dimes    = " + dimes);
+		System.out.println("Nickels  = " + nickels);
+		System.out.println("Pennies  = " + pennies);
 	}
 }

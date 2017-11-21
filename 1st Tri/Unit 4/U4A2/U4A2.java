@@ -1,5 +1,3 @@
-// Name
-//
 // This program will approximate the value of pi.
 
 public class U4A2

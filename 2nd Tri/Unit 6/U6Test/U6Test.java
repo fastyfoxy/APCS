@@ -1,5 +1,3 @@
-// Tariq
-//
 // This program will sort an array of names and search for "Jones".
 
 import javax.swing.JTextArea;

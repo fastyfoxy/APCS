@@ -1,3 +1,5 @@
+// This program will test the merge sort and quick sort methods.
+
 import javax.swing.JTextArea;
 import javax.swing.JApplet;
 import java.awt.Container;
@@ -6,7 +8,6 @@ import java.awt.Font;
 
 public class U6A2 extends JApplet
 {
-
 	private JTextArea out = new JTextArea();
 	private int[] array1 = new int[10000];
 	private int[] array2 = new int[10000];

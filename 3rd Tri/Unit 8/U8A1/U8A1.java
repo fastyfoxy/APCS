@@ -1,5 +1,3 @@
-// Tariq
-//
 // This program will test the concepts of an interface.
 
 import javax.swing.JFrame;

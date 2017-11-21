@@ -1,77 +1,21 @@
-// Name
-//
-// This program will display the itinerary of a golf trip.
+// This program will test the methods of the U5Test class.
 
 public class U5Test
 {
-	private String[] cityNames;
-	private int[][] distances;
-
-	public U5Test(int[][]d, String[] cn)
+	public static void main(String[] args)
 	{
-		distances = d;
-		cityNames = cn;
+		String[] names = {"Iowa City", "Ames", "Waterloo", "Ottumwa", "Burlington"};
+		int[][]chart = {{0, 121, 81, 83, 82},
+						{121, 0, 96, 116, 190},
+						{81, 96, 0, 117, 154},
+						{83, 116, 117, 0, 77},
+						{82, 190, 154, 77, 0}};
+
+		Itinerary x = new Itinerary(chart, names);
+		System.out.println("The Itinerary\n-------------");
+
+		String[] output = x.makeItinerary();
+
+		for (int i=0; i<5; i++) System.out.println(output[i]);
 	}
-
-	public int findRemoteCity()
-	{
-		int index = 0;
-		int sum = 0;
-
-		for (int i=0; i<cityNames.length; i++)
-		{
-			int count = 0;
-			for (int c=0; c<distances[i].length; c++)
-			{
-				 count+= distances[i][c];
-			}
-
-			if(count>sum) index = i;
-			if(count>sum) sum = count;
-		}
-		return index;
-	}
-
-	public int findNearestCity(int num)
-	{
-		int index = 0;
-		int distance = Integer.MAX_VALUE;
-
-		for (int i=0; i<cityNames.length; i++)
-		{
-			if (i==num) continue;
-			int d = distances[num][i];
-
-			if (d<distance) index = i;
-			if (d<distance) distance = d;
-		}
-
-		for (int i=0; i<cityNames.length; i++)
-		{
-			distances[i][index] = Integer.MAX_VALUE;
-		}
-
-		return index;
-	}
-
-	public String[] makeItinerary()
-	{
-		int[] indices = new int[cityNames.length];
-		indices[0] = findRemoteCity();
-
-		for (int i=1; i<cityNames.length; i++)
-		{
-			indices[i] = findNearestCity(indices[i - 1]);
-		}
-
-		String[] itinerary = new String[cityNames.length];
-
-		for (int i = 0; i < cityNames.length; i++)
-		{
-			itinerary[i] = cityNames[indices[i]];
-		}
-
-		return itinerary;
-	}
-
 }

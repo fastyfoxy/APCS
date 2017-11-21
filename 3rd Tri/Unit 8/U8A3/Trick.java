@@ -1,5 +1,3 @@
-// Tariq
-//
 // This program will structure the Trick object.
 
 import java.util.ArrayList;

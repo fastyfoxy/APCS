@@ -1,5 +1,3 @@
-// Name
-//
 // This progarm  will determine the number of months it will take to completely pay off debt.
 
 import java.util.Scanner;
@@ -13,6 +11,7 @@ public class U4A4
 	{
 		U4A4 debt = new U4A4();
 	}
+
 	public U4A4()
 	{
 		Scanner in = new Scanner(System.in);

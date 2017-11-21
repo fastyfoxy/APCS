@@ -1,5 +1,3 @@
-// Tariq
-//
 // This program will parse an input string and fill all instance fields.
 
 import java.util.StringTokenizer;

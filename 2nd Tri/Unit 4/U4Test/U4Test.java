@@ -1,5 +1,3 @@
-// Name
-//
 // This program will find and print the first prime number
 // larger than the number inputted by the user.
 
@@ -44,6 +42,12 @@ public class U4Test extends JApplet
 
 	boolean isPrime(long n)
 	{
-		//<prime checking algorithm>
+	    if(n%2==0 || n%3==0) return false;
+	    long sqrt=(long)Math.sqrt(n)+1;
+	    for(long i=6; i<=sqrt; i+=6)
+	    {
+	        if(n%(i-1)==0 || n%(i+1)==0) return false;
+	    }
+	    return true;
 	}
 }

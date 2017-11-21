@@ -1,5 +1,3 @@
-// Tariq
-//
 // This program will test the methods of the Card and Trick class.
 
 import java.util.StringTokenizer;
